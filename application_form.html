@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Application</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="./css/scrollbar.css" />
+  </head>
+
+  <body>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="wrapper">
+            <!-- Sidebar  -->
+            <nav id="sidebar">
+              <div id="dismiss">
+                <i class="fas fa-arrow-left"></i>
+              </div>
+
+              <div class="sidebar-header">
+                <h3>Menu Bar</h3>
+              </div>
+
+              <ul class="list-unstyled components">
+                <p>Dummy Heading</p>
+                <li class="active">
+                  <a
+                    href="#homeSubmenu"
+                    data-toggle="collapse"
+                    aria-expanded="false"
+                    >Home</a
+                  >
+                  <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <li>
+                      <a href="#">Home 1</a>
+                    </li>
+                    <li>
+                      <a href="#">Home 2</a>
+                    </li>
+                    <li>
+                      <a href="#">Home 3</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">About</a>
+                </li>
+                <li>
+                  <a href="#">Portfolio</a>
+                </li>
+                <li>
+                  <a href="#">Contact</a>
+                </li>
+              </ul>
+
+              <ul class="list-unstyled CTAs">
+                <li>
+                  <a
+                    href="https://bootstrapious.com/tutorial/files/sidebar.zip"
+                    class="download"
+                    >Download source</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://bootstrapious.com/p/bootstrap-sidebar"
+                    class="article"
+                    >Back to article</a
+                  >
+                </li>
+              </ul>
+            </nav>
+            <!-- Page Content  -->
+            <div id="content">
+              <nav class="navbar navbar-light bg-dark">
+                <div class="container align-items-center">
+                  <button
+                    type="button"
+                    id="sidebarCollapse"
+                    class="btn btn-info"
+                  >
+                    <i class="fas fa-align-left"></i>
+                  </button>
+                  <div class="mujib">
+                    <img
+                      style="height: 60px"
+                      src="./images/mujib_logo.png"
+                      alt=""
+                      srcset=""
+                    />
+                  </div>
+                  <div class="juboleague">
+                    <img
+                      style="height: 60px"
+                      src="./images/juboleague.svg"
+                      alt=""
+                      srcset=""
+                    />
+                  </div>
+                  <div class="hasina justify-content-end">
+                    <img
+                      style="height: 60px"
+                      src="./images/mujib_hasina_moni.png"
+                      alt=""
+                      srcset=""
+                    />
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="overlay"></div>
+    <!-- SHOWCASE Slider -->
+    <section id="showcase">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item carousel-image-1 active">
+            <div class="container">
+              <div class="carousel-caption d-none d-sm-block text-right mb-5">
+                <h1 class="display-3">Heading One</h1>
+                <p class="lead">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Rerum quidem nihil eaque. Dignissimos cumque nam hic,
+                  similique mollitia sint maxime?
+                </p>
+                <a href="#" class="btn btn-danger btn-lg">Sign Up Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item carousel-image-2">
+            <div class="container">
+              <div class="carousel-caption d-none d-sm-block mb-5">
+                <h1 class="display-3">Heading Two</h1>
+                <p class="lead">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Rerum quidem nihil eaque. Dignissimos cumque nam hic,
+                  similique mollitia sint maxime?
+                </p>
+                <a href="#" class="btn btn-primary btn-lg">Learn More</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item carousel-image-3">
+            <div class="container">
+              <div class="carousel-caption d-none d-sm-block text-right mb-5">
+                <h1 class="display-3">Heading Three</h1>
+                <p class="lead">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Rerum quidem nihil eaque. Dignissimos cumque nam hic,
+                  similique mollitia sint maxime?
+                </p>
+                <a href="#" class="btn btn-success btn-lg">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a href="#myCarousel" data-slide="prev" class="carousel-control-prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+
+        <a href="#myCarousel" data-slide="next" class="carousel-control-next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+    </section>
+
+    <section id="form-section">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center pt-5">
+            <h1>আবেদন ফর্ম</h1>
+            <button class="btn btn-primary">ঘর নির্মাণ</button>
+            <button class="btn btn-success">সাবমার্সিবল নির্মাণ</button>
+            <button class="btn btn-warning">সমস্যা</button>
+          </div>
+        </div>
+        <!-- form -->
+        <form class="mainForm">
+          <!-- First step -->
+          <div class="formStep1 hidden">
+            <div class="dp-1 d-flex justify-content-center pb-4">
+              <h3 class="formTitle">আবেদনকারীর তথ্য</h3>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="name">পূর্ণ নাম</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputEmail4"
+                  placeholder="Full Name"
+                />
+              </div>
+              <div class="form-group col-md-6">
+                <legend class="col-form-label pt-0">লিঙ্গ</legend>
+                <div class="col-sm-10 d-flex m-0">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="gridRadios"
+                      id="gridRadios1"
+                      value="option1"
+                      checked
+                    />
+                    <label class="form-check-label pr-2" for="gridRadios1">
+                      পুরুষ
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="gridRadios"
+                      id="gridRadios2"
+                      value="option2"
+                    />
+                    <label class="form-check-label pr-2" for="gridRadios2">
+                      মহিলা
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="gridRadios"
+                      id="gridRadios3"
+                      value="option3"
+                    />
+                    <label class="form-check-label pr-2" for="gridRadios3">
+                      অন্যান্য
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="phone">মোবাইল নং</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="phone"
+                  placeholder="Mobile Number"
+                  pattern="[0-9]+"
+                />
+              </div>
+              <div class="form-group col-md-6">
+                <label for="number">ভোটার আইডি নং</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="nid"
+                  placeholder="NID No."
+                />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-3">
+                <label for="inputCity">বিভাগ</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputCity"
+                  placeholder="Gazipur"
+                  disabled
+                />
+              </div>
+              <div class="form-group col-md-3">
+                <label for="inputPs">থানা</label>
+                <select id="inputPs" class="form-control">
+                  <option selected>Choose...</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                </select>
+              </div>
+              <div class="form-group col-md-3">
+                <label for="inputWard">ওয়ার্ড নং</label>
+                <select id="inputWard" class="form-control">
+                  <option selected>Choose...</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                </select>
+              </div>
+              <div class="form-group col-md-3">
+                <label for="inputArea">মহল্লা </label>
+                <input type="text" class="form-control" id="inputArea" />
+              </div>
+            </div>
+          </div>
+          <!-- Second Step  -->
+          <div class="formStep2 hidden">
+            <div class="dp-1 d-flex justify-content-center pb-4">
+              <h3 class="formTitle">সমস্যার বিবরণ</h3>
+            </div>
+            <div class="form-row">
+              <div class="form-group col">
+                <label for="inputProblem">সমস্যার বিবরণ দিন</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputProblem"
+                  placeholder="বিবরণ লিখুন..."
+                />
+              </div>
+            </div>
+            <p>সমস্যার স্থান</p>
+            <div class="form-row">
+              <div class="form-group col-md-3">
+                <label for="inputCity">বিভাগ</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputCity"
+                  placeholder="Gazipur"
+                  disabled
+                />
+              </div>
+              <div class="form-group col-md-3">
+                <label for="inputPs">থানা</label>
+                <select id="inputPs" class="form-control">
+                  <option selected>Choose...</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                </select>
+              </div>
+              <div class="form-group col-md-3">
+                <label for="inputWard">ওয়ার্ড নং</label>
+                <select id="inputWard" class="form-control">
+                  <option selected>Choose...</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                </select>
+              </div>
+              <div class="form-group col-md-3">
+                <label for="inputArea">মহল্লা </label>
+                <input type="text" class="form-control" id="inputArea" />
+              </div>
+            </div>
+          </div>
+          <div class="formStep3">
+            <div class="dp-1 d-flex justify-content-center pb-4">
+              <h3 class="formTitle">সমস্যার বিবরণ</h3>
+            </div>
+            <div class="form-row">
+              <div class="form-group col">
+                <label for="inputQuery"
+                  >এই প্রকল্প সম্পর্কে কিভাবে জেনেছেন?</label
+                >
+                <input
+                  type="textarea"
+                  class="form-control"
+                  id="inputQuery"
+                  placeholder="বিবরণ লিখুন..."
+                />
+                <div class="pt-4">
+                  <label for="exampleFormControlTextarea1" class="form-label"
+                    >সাইফুল ইসলাম সম্পর্কে আপনার মতামত</label
+                  >
+                  <textarea
+                    class="form-control"
+                    id="exampleFormControlTextarea1"
+                    rows="5"
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="form-group">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="gridCheck" />
+              <label class="form-check-label" for="gridCheck">
+                Check me out
+              </label>
+            </div>
+          </div> -->
+          <div class="d-flex justify-content-center mt-4">
+            <button type="reset" class="btn formButtons btn-outline-secondary">
+              Reset
+            </button>
+            <button type="submit" class="btn formButtons btn-outline-primary">
+              Next
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- Font Awesome JS -->
+    <script src="./script/solid.js"></script>
+    <script src="./script/fontawsome.js"></script>
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="./script/jquery-3.3.1.slim.min.js"></script>
+    <!-- Popper.JS -->
+    <script src="./script/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="./script/bootstrap.min.js"></script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="./script/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!-- Custom JS -->
+    <script src="./script/script.js"></script>
+  </body>
+</html>
