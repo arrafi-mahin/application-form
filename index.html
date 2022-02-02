@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <title>Application</title>
+    <title>আবেদন ফর্ম</title>
 
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
@@ -189,13 +189,13 @@
         <div class="row">
           <div class="col text-center pt-5">
             <h1>আবেদন ফর্ম</h1>
-            <button class="btn btn-primary">ঘর নির্মাণ</button>
-            <button class="btn btn-success">সাবমার্সিবল নির্মাণ</button>
-            <button class="btn btn-warning">সমস্যা</button>
+            <button class="btn formBtn btn-primary">ঘর নির্মাণ</button>
+            <button class="btn formBtn btn-primary">সাবমার্সিবল নির্মাণ</button>
+            <button class="btn formBtn btn-primary">সমস্যা</button>
           </div>
         </div>
         <!-- form -->
-        <form class="mainForm">
+        <form class="mainForm hidden">
           <!-- First step -->
           <div class="formStep1">
             <div class="dp-1 d-flex justify-content-center pb-4">
@@ -207,8 +207,8 @@
                 <input
                   type="text"
                   class="form-control"
-                  id="inputEmail4"
-                  placeholder="Full Name"
+                  id="name"
+                  placeholder="আবেদনকারীর নাম..."
                 />
               </div>
               <div class="form-group col-md-6">
@@ -218,9 +218,9 @@
                     <input
                       class="form-check-input"
                       type="radio"
-                      name="gridRadios"
+                      name="gender"
                       id="gridRadios1"
-                      value="option1"
+                      value="Male"
                       checked
                     />
                     <label class="form-check-label pr-2" for="gridRadios1">
@@ -231,9 +231,9 @@
                     <input
                       class="form-check-input"
                       type="radio"
-                      name="gridRadios"
+                      name="gender"
                       id="gridRadios2"
-                      value="option2"
+                      value="Female"
                     />
                     <label class="form-check-label pr-2" for="gridRadios2">
                       মহিলা
@@ -243,9 +243,9 @@
                     <input
                       class="form-check-input"
                       type="radio"
-                      name="gridRadios"
+                      name="gender"
                       id="gridRadios3"
-                      value="option3"
+                      value="Other"
                     />
                     <label class="form-check-label pr-2" for="gridRadios3">
                       অন্যান্য
@@ -259,7 +259,7 @@
                   type="number"
                   class="form-control"
                   id="phone"
-                  placeholder="Mobile Number"
+                  placeholder="মোবাইল নাম্বার..."
                   pattern="[0-9]+"
                 />
               </div>
@@ -269,7 +269,7 @@
                   type="number"
                   class="form-control"
                   id="nid"
-                  placeholder="NID No."
+                  placeholder="ভোটার আইডি নং..."
                 />
               </div>
             </div>
@@ -280,14 +280,14 @@
                   type="text"
                   class="form-control"
                   id="inputCity"
-                  placeholder="Gazipur"
+                  placeholder="গাজীপুর"
                   disabled
                 />
               </div>
               <div class="form-group col-md-3">
                 <label for="inputPs">থানা</label>
                 <select id="inputPs" class="form-control">
-                  <option selected>Choose...</option>
+                  <option selected>থানা নির্বাচন করুন</option>
                   <option>1</option>
                   <option>2</option>
                   <option>3</option>
@@ -297,7 +297,7 @@
               <div class="form-group col-md-3">
                 <label for="inputWard">ওয়ার্ড নং</label>
                 <select id="inputWard" class="form-control">
-                  <option selected>Choose...</option>
+                  <option selected>ওয়ার্ড নির্বাচন করুন</option>
                   <option>1</option>
                   <option>2</option>
                   <option>3</option>
@@ -306,7 +306,12 @@
               </div>
               <div class="form-group col-md-3">
                 <label for="inputArea">মহল্লা </label>
-                <input type="text" class="form-control" id="inputArea" />
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputArea"
+                  placeholder="এলাকার নাম লিখুন..."
+                />
               </div>
             </div>
           </div>
@@ -366,7 +371,7 @@
           </div>
           <div class="formStep3 hidden">
             <div class="dp-1 d-flex justify-content-center pb-4">
-              <h3 class="formTitle">সমস্যার বিবরণ</h3>
+              <h3 class="formTitle">মতামত</h3>
             </div>
             <div class="form-row">
               <div class="form-group col">
@@ -401,14 +406,64 @@
             </div>
           </div> -->
           <div class="d-flex justify-content-center mt-4">
-            <button type="reset" class="btn formButtons btn-outline-secondary">
+            <button
+              type="reset"
+              class="btn formButtons buttonReset btn-secondary"
+            >
               Reset
             </button>
-            <button type="submit" class="btn formButtons btn-outline-primary">
+            <button type="button" class="btn formButtons formNext btn-primary">
               Next
+            </button>
+            <!-- modal button -->
+            <button
+              type="button"
+              class="btn formButtons btnProcess btn-primary hidden"
+              data-toggle="modal"
+              data-target="#exampleModalCenter"
+            >
+              Process
             </button>
           </div>
         </form>
+        <!-- modal -->
+        <div
+          class="modal fade"
+          id="exampleModalCenter"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="exampleModalCenterTitle"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">
+                  Modal title
+                </h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">...</div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <!-- Font Awesome JS -->

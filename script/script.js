@@ -54,3 +54,50 @@ $(document).ready(function () {
   });
 })(jQuery);
 //# sourceURL=pen.js
+
+// Application Form
+const form = document.querySelector(".mainForm");
+const formOne = document.querySelector(".formStep1");
+const formTwo = document.querySelector(".formStep2");
+const formThree = document.querySelector(".formStep3");
+const formBtn = document.querySelectorAll(".formBtn");
+let count = 0;
+const formActive = function () {
+  form.classList.remove("hidden");
+};
+const formNext = function (e) {
+  if (e === 0) {
+    formOne.classList.add("hidden");
+    formTwo.classList.remove("hidden");
+    count++;
+  } else if (e === 1) {
+    formTwo.classList.add("hidden");
+    formThree.classList.remove("hidden");
+  }
+};
+//application selection button
+for (let i = 0; i < formBtn.length; i++) {
+  console.log(i);
+  formBtn[i].addEventListener("click", formActive);
+}
+//Next button
+document.querySelector(".formNext").addEventListener("click", function () {
+  if (count === 0) {
+    formOne.classList.add("hidden");
+    formTwo.classList.remove("hidden");
+    count++;
+  } else if (count === 1) {
+    formTwo.classList.add("hidden");
+    formThree.classList.remove("hidden");
+    document.querySelector(".formNext").classList.add("hidden");
+    document.querySelector(".btnProcess").classList.remove("hidden");
+  }
+});
+
+//Reset button
+document.querySelector(".buttonReset").addEventListener("click", function () {
+  formOne.classList.remove("hidden");
+  formThree.classList.add("hidden");
+  document.querySelector(".formNext").textContent = "Next";
+  count = 0;
+});
