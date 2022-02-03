@@ -216,3 +216,17 @@ a.article:hover {
 .hidden {
   display: none;
 }
+
+/* Development section */
+#development {
+  margin-top: 4%;
+  margin-bottom: 4%;
+  background-color: #343a40;
+}
+.devTitle {
+  color: white;
+}
+.devHead {
+  padding-bottom: 8px;
+  border-bottom: #fff 2px solid;
+}

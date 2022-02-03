@@ -77,7 +77,6 @@ const formNext = function (e) {
 };
 //application selection button
 for (let i = 0; i < formBtn.length; i++) {
-  console.log(i);
   formBtn[i].addEventListener("click", formActive);
 }
 //Next button
@@ -98,6 +97,8 @@ document.querySelector(".formNext").addEventListener("click", function () {
 document.querySelector(".buttonReset").addEventListener("click", function () {
   formOne.classList.remove("hidden");
   formThree.classList.add("hidden");
-  document.querySelector(".formNext").textContent = "Next";
+  document.querySelector(".formNext").classList.remove("hidden");
+  document.querySelector(".btnProcess").classList.add("hidden");
+  console.log("proceed");
   count = 0;
 });
