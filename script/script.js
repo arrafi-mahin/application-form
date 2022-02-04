@@ -62,24 +62,16 @@ const formTwo = document.querySelector(".formStep2");
 const formThree = document.querySelector(".formStep3");
 const formBtn = document.querySelectorAll(".formBtn");
 let count = 0;
+//form Activation function
 const formActive = function () {
   form.classList.remove("hidden");
-};
-const formNext = function (e) {
-  if (e === 0) {
-    formOne.classList.add("hidden");
-    formTwo.classList.remove("hidden");
-    count++;
-  } else if (e === 1) {
-    formTwo.classList.add("hidden");
-    formThree.classList.remove("hidden");
-  }
 };
 //application selection button
 for (let i = 0; i < formBtn.length; i++) {
   formBtn[i].addEventListener("click", formActive);
 }
-// //Form Validation
+
+//Form Validation
 //first Step
 const uName = document.getElementById("name");
 const errorMsg = document.getElementById("errorMessage");
