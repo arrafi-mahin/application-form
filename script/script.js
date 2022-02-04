@@ -79,6 +79,20 @@ const formNext = function (e) {
 for (let i = 0; i < formBtn.length; i++) {
   formBtn[i].addEventListener("click", formActive);
 }
+// //Form Validation
+//first Step
+const uName = document.getElementById("name");
+const errorMsg = document.getElementById("errorMessage");
+form.addEventListener("submit", (e) => {
+  let messages = [];
+  if (uName.value === "" || uName.value === null) {
+    messages.push("Enter Valid Name");
+  }
+  if (messages.length > 0) {
+    errorMsg.textContent = messages;
+    e.preventDefault();
+  }
+});
 //Next button
 document.querySelector(".formNext").addEventListener("click", function () {
   if (count === 0) {
@@ -99,6 +113,6 @@ document.querySelector(".buttonReset").addEventListener("click", function () {
   formThree.classList.add("hidden");
   document.querySelector(".formNext").classList.remove("hidden");
   document.querySelector(".btnProcess").classList.add("hidden");
-  console.log("proceed");
+  console.log("reset proceed");
   count = 0;
 });

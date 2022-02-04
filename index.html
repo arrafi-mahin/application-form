@@ -200,6 +200,7 @@
           <div class="formStep1">
             <div class="dp-1 d-flex justify-content-center pb-4">
               <h3 class="formTitle">আবেদনকারীর তথ্য</h3>
+              <p id="errorMessage" class="text-danger"></p>
             </div>
             <div class="form-row">
               <div class="form-group col-md-6">
@@ -410,7 +411,7 @@
             >
               Reset
             </button>
-            <button type="button" class="btn formButtons formNext btn-primary">
+            <button type="button" value="submit" class="btn formButtons formNext btn-primary">
               Next
             </button>
             <!-- modal button -->
@@ -423,8 +424,9 @@
               Process
             </button>
           </div>
-          <!-- modal -->
-          <div
+        </form>
+            <!-- modal -->
+            <div
             class="modal fade"
             id="exampleModalCenter"
             tabindex="-1"
@@ -448,7 +450,7 @@
                 </div>
                 <div class="modal-body">
                     <!-- form -->
-                    <form action="" class="mainForm">
+                    <form action="" class="modalForm">
                       <!-- First step -->
                       <div class="formStep1">
                         <div class="dp-1 d-flex justify-content-center pb-4">
@@ -661,28 +663,17 @@
                         <!-- modal button -->
                         <button
                           type="button"
-                          class="btn formButtons btnProcess btn-primary hidden"
-                          data-toggle="modal"
-                          data-target="#exampleModalCenter"
+                          class="btn btn-secondary"
+                          data-dismiss="modal"
                         >
-                          Process
+                          Edit
                         </button>
+                        <button type="submit" value="submit" class="btn btn-primary">Submit</button>
                     </form>
-                </div>
-                <div class="modal-footer">
-                  <button
-                    type="button"
-                    class="btn btn-secondary"
-                    data-dismiss="modal"
-                  >
-                    Edit
-                  </button>
-                  <button type="submit" value="submit" class="btn btn-primary">Submit</button>
                 </div>
               </div>
             </div>
           </div>
-        </form>
         </div>
       </div>
     </section>
@@ -698,10 +689,14 @@
         </div>
         <div class="row pt-4 pb-4">
           <div class="col-md-6">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/77rOyhmlNLg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="iframe-container">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/77rOyhmlNLg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
           </div>
           <div class="col-md-6">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/bRtdKg-Peqk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="iframe-container">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/bRtdKg-Peqk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
           </div>
         </div>
       </div>
